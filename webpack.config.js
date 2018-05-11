@@ -20,6 +20,14 @@ module.exports = (env) => {
       test: /\.js$/,
       exclude: /node_modules/
     }, {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
+      }, {
       test: /\.s?css$/,
       use: CSSExtract.extract({
         use: [
